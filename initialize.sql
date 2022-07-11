@@ -1,5 +1,8 @@
 DROP TABLE IF EXISTS usersContact, usersAddress, users;
+SELECT * FROM users;
 
+
+SELECT * FROM users JOIN usersAddress on users.id = usersAddress.user_id JOIN usersContact on users.id = usersContact.user_id;
 CREATE TABLE users (
   id INT NOT NULL AUTO_INCREMENT,
   first_name VARCHAR(50),
